@@ -7,7 +7,8 @@ public class Main {
         server.createContext("/", exchange -> {
             String html = "<html><head><title>Docker確認課題</title></head>"
                     + "<body><h1>GitHubとDockerの確認課題</h1>"
-                    + "<p>Javaプログラムから表示しています</p></body></html>";
+                    + "<p>Javaプログラムから表示しています</p></body></html>"
+                    + "<p>2回目のコミットで追加しました</p>";
             byte[] bytes = html.getBytes("UTF-8");
             exchange.getResponseHeaders().set("Content-Type", "text/html; charset=UTF-8");
             exchange.sendResponseHeaders(200, bytes.length);
